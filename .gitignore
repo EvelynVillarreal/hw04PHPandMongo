@@ -1,0 +1,15 @@
+.env
+vendor/
+.DS_Store
+node_modules/
+npm-debug.log
+*.log
+*.tmp
+coverage/
+.nyc_output/
+.cache/
+.vscode/
+.idea/
+
+# Docker
+docker-compose.override.yml

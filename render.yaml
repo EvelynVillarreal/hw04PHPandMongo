@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: hw04-php-mongo
+    env: docker
+    dockerfilePath: Dockerfile
+    dockerBuildContext: .
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb://root123:root123@clusterglobal.wtz0nut.mongodb.net:27017/?appName=ClusterGlobal
+      - key: DATABASE_NAME
+        value: test
+    healthCheckPath: /

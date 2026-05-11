@@ -1,0 +1,8 @@
+{
+  "name": "hw04-php-mongo",
+  "description": "MongoDB Manager with PHP",
+  "require": {
+    "php": "^7.4",
+    "mongodb/mongodb": "^1.16"
+  }
+}

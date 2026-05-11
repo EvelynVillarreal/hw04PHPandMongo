@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Registry</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .form-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 80px; }
+        input { padding: 5px; width: 200px; }
+        button { padding: 8px 15px; cursor: pointer; background-color: #4CAF50; color: white; border: none; }
+        button.delete { background-color: #f44336; }
+        button.edit { background-color: #2196F3; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+
+    <h2>Song Registry</h2>
+
+    <div style="background-color: #f9f9f9; padding: 15px; border: 1px solid #ccc;">
+        <input type="hidden" id="entryId">
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="1" max="120">
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="songTitle">Song:</label>
+            <input type="text" id="songTitle" required>
+        </div>
+        <div class="form-group">
+            <label for="artistName">Artist:</label>
+            <input type="text" id="artistName" required>
+        </div>
+        
+        <button id="saveButton" onclick="saveEntry()">Save Entry</button>
+        <button onclick="clearForm()" style="background-color: #888;">Cancel</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="entriesTableBody">
+        </tbody>
+    </table>
+
+    <script src="./public/js/script.js"></script>
+</body>
+</html>
